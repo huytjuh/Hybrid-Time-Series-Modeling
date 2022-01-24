@@ -1,5 +1,5 @@
 # **Hybrid Time Series Modeling**
-![](https://i.ytimg.com/vi/wqQKFu41FIw/maxresdefault.jpg)
+![](https://www.akira.ai/hubfs/Imported_Blog_Media/akira-ai-hybrid-learning-models.png)
 ![](https://img.shields.io/github/license/huytjuh/Recommender-System-Basket-Analysis) ![](https://img.shields.io/maintenance/no/2020)
 
 Subsequence Time Series (STS) Clustering model for discovering hidden patterns and complex seasonality within univariate time-series datasets by clustering similar groups of time windows based on their structural characteristics with advanced statistics.

@@ -13,24 +13,40 @@ Python and R implementation from scratch inspired by [Zhang (2003)](https://www.
 ## Introduction
 
 
+
+
 Time series forecasting is a crucial task in various fields of business and science. There are two co-existing approaches to time series forecasting, statistical methods and machine learning methods, and both come with different strengths and limitations. Hybrid methods promise to advance time series forecasting by combining the best aspects of statistics and machine learning. This blog post gives a deeper understanding of the different approaches to forecasting and seeks to give hints on choosing an appropriate algorithm
+
+
+Hybrid methods promise to advance time series forecasting by combining the best of statistical and machine learning methods.
+
+The fundamental idea is that this combination compensates for the limitations of one approach with the strengths of the other.
+
+For instance, the effectiveness of statistical methods with limited data availability can counteract the extensive data requirements of machine learning methods. Apart from that, the consideration of a priori knowledge can simplify the expected forecasting task and decrease the computational effort. Furthermore, hybrid methods can incorporate cross-learning, a capability that many statistical methods lack. Finally, hybrid methods provide a solution to the dilemma of the assumption of linearity. As real-world time series may be purely linear, purely nonlinear, or often contain a combination of those two patterns, hybrid methods can be effective where traditional approaches reach their limits [2].
+
+
+Hybrid methods are more than just ensembles! While ensemble methods are a simplistic yet effective combination of forecasts such as averages or weighted averages, hybrid methods follow a different strategy. They can be understood as a sophisticated combination of statistical and machine learning methods that interact with each other.
+
+Research on hybrid methods is not a novelty, as the work began almost twenty years ago. The basic concept was first proposed by Zhang, who describes a hybridization of ARIMA and MLP. The underlying principle is that the MLP learns the deviation of the ARIMA prediction from the actual value and seeks to adjust it to obtain a more accurate result. This methodology is plausible as a time series is composed of a linear and a nonlinear component. The ARIMA is fitted to capture the linear component, so consequently, the residuals from the linear model account for the nonlinear relationship. The MLP takes the past residuals as input to learn a function that can be used to forecast the deviation of the ARIMA predictions. Finally, the hybrid forecast is obtained by adding the predictions of both models [3].
+
 
 
 
 
 ## Colab Notebook
 
-STS Clustering based on Hierarchical Clustering:<br/>
+Hybrid Time Series Modeling based on ARIMA-Fourier (default: lightGBM):<br/>
 [Google Colab]() | [Code]()
 
-STS Clustering based on Self-Organizing Maps (SOM):<br/>
+Hybrid Time Series Modeling based on Holt-Winter (default: lightGBM):<br/>
 [Google Colab]() | [Code]()
+
 
 ## Prerequisites
 * Linux or macOS
 * python 3.8
-* nolds 0.5.2
 * pmarima 1.8.4
+* lightgbm 3.3.2
 * bayesian-optimization 1.2.0
 * CPU or NVIDIA GPU + CUDA CuDNN
 

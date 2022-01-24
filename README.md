@@ -2,9 +2,9 @@
 ![](https://www.akira.ai/hubfs/Imported_Blog_Media/akira-ai-hybrid-learning-models.png) <br />
 ![](https://img.shields.io/github/license/huytjuh/Recommender-System-Basket-Analysis) ![](https://img.shields.io/maintenance/no/2020)
 
-Subsequence Time Series (STS) Clustering model for discovering hidden patterns and complex seasonality within univariate time-series datasets by clustering similar groups of time windows based on their structural characteristics with advanced statistics.
+Hybrid Time Series modeling: A more advanced approach to time-series forecasting by combining the best aspects of Econometric and Machine Learning models, two co-existing approaches both with different strengths and limitations; that is, this innovative framework compensates the limitations of one approach with the strengths of the other.
 
-Python implementation from scratch inspired by paper [Wang et al. (2006)](https://link.springer.com/content/pdf/10.1007/s10618-005-0039-x.pdf).
+Python and R implementation from scratch inspired by [Zhang (2003)](https://www.sciencedirect.com/science/article/pii/S0925231201007020?casa_token=XeXr4aPDvnsAAAAA:pa3DJ-FgeIKkBDlo1czuDt9HX-aXssxxZlUpttChXh82Jr83uG9AWNPiShO7x-zUt6j-65rnA2A) and [Smyl (2020)](https://www.sciencedirect.com/science/article/pii/S0169207019301153?casa_token=Xr7k2IL5bVIAAAAA:VPteiTYtOz1Xo8wKbDuI_0VDiPxGoi1JWGgMsKo9WAH72a_1YGbG9SN69wo-A3Ro45Ve2n-oNhg).
 
 ***Version: 1.2 (2020)*** 
 
@@ -14,6 +14,8 @@ Python implementation from scratch inspired by paper [Wang et al. (2006)](https:
 
 
 Time series forecasting is a crucial task in various fields of business and science. There are two co-existing approaches to time series forecasting, statistical methods and machine learning methods, and both come with different strengths and limitations. Hybrid methods promise to advance time series forecasting by combining the best aspects of statistics and machine learning. This blog post gives a deeper understanding of the different approaches to forecasting and seeks to give hints on choosing an appropriate algorithm
+
+
 
 
 ## Colab Notebook
@@ -100,5 +102,6 @@ A comparison between seasonal self-evident explanatory variables that fall under
 
 ## Reference Papers
 
-* Wang, X., Smith, K., & Hyndman, R. (2006). Characteristic-based clustering for time series data. Data mining and knowledge Discovery, 13(3), 335-364. Available online: [Link](https://link.springer.com/content/pdf/10.1007/s10618-005-0039-x.pdf)
+* Zhang, G. P. (2003). Time series forecasting using a hybrid ARIMA and neural network model. Neurocomputing, 50, 159-175. Available online: [Link](https://link.springer.com/content/pdf/10.1007/s10618-005-0039-x.pdf)
 
+* Smyl, S. (2020). A hybrid method of exponential smoothing and recurrent neural networks for time series forecasting. International Journal of Forecasting, 36(1), 75-85. Available online: [Link]()

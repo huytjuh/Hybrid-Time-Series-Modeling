@@ -2,7 +2,7 @@
 ![](https://www.akira.ai/hubfs/Imported_Blog_Media/akira-ai-hybrid-learning-models.png) <br />
 ![](https://img.shields.io/github/license/huytjuh/Recommender-System-Basket-Analysis) ![](https://img.shields.io/maintenance/no/2020)
 
-Hybrid Time Series modeling: A more advanced approach to time-series forecasting by combining the best aspects of Econometric and Machine Learning models, two co-existing approaches both with different strengths and limitations. An innovative framework compensates the limitations of one approach with the strengths of the other.
+Hybrid Time Series modeling: A more advanced approach to time-series forecasting by combining the best aspects of Econometric and Machine Learning models, two co-existing approaches both with different strengths and limitations. An innovative hybrid framework compensates the limitations of one approach with the strengths of the other.
 
 Python and R implementation from scratch inspired by [Zhang (2003)](https://www.sciencedirect.com/science/article/pii/S0925231201007020?casa_token=XeXr4aPDvnsAAAAA:pa3DJ-FgeIKkBDlo1czuDt9HX-aXssxxZlUpttChXh82Jr83uG9AWNPiShO7x-zUt6j-65rnA2A) and [Smyl (2020)](https://www.sciencedirect.com/science/article/pii/S0169207019301153?casa_token=Xr7k2IL5bVIAAAAA:VPteiTYtOz1Xo8wKbDuI_0VDiPxGoi1JWGgMsKo9WAH72a_1YGbG9SN69wo-A3Ro45Ve2n-oNhg).
 

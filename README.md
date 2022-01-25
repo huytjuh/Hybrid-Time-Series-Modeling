@@ -12,7 +12,8 @@ Python and R implementation from scratch inspired by [Zhang (2003)](https://www.
 
 ## Introduction
 
-Hybrid models promise to advance time-series forecasting by combining two co-existing approaches: Econometrics and Machine Learning models, both comes with different strengths and limitations. It combines the best aspects of statistics and Machine Learning, where one compensates for the weakness with the strengths of the other. That is, the effectiveness of statistical methods with limited data availability can counteract the extensive data requirements of Machine Learning. In turn, the consideration of a priori knowledge can simplify the expected forecasting task and decrease the computational effort, allowing hybrid methods to incorporate cross-learning, a capability that many statistical methods lack. This methodology is plausible as a time-series is composed of a linear and a nonlinear component. The statistical model is fitted to capture the linear component, so consequently, the residuals from the linear model account for the nonlinear relationship. The Machine Learning model takes the past residuals as input to learn a function that can be used to forecast the deviation of the linear predictions. Therefore, as real-world time-series may be purely linear, purely nonlinear, or often contain a combination of those two patterns, hybridization provide a solution to the dilemma of the assumption of linearity where traditional approaches reach their limits.
+Hybrid models promise to advance time-series forecasting by combining two co-existing approaches: Econometrics and Machine Learning models, both comes with different strengths and limitations. It combines the best aspects of statistics and Machine Learning, where one compensates for the weakness with the strengths of the other. That is, the effectiveness of statistical methods with limited data availability can counteract the extensive data requirements of Machine Learning. In turn, the consideration of a priori knowledge can simplify the expected forecasting task and decrease the computational effort, allowing hybrid methods to incorporate cross-learning, a capability that many statistical methods lack. This methodology is plausible as a time-series is composed of a linear and a nonlinear component. The statistical model is fitted to capture the linear component, so consequently, the residuals from the linear model account for the nonlinear relationship. The Machine Learning model takes the past residuals as input to learn a function that can be used to forecast the deviation of the linear predictions. Therefore, as real-world time-series may be purely linear, purely nonlinear, or often contain a combination of those two patterns, hybridization provide a solution to the dilemma of the assumption of linearity, in contrast to traditional approches where most reach their limits.
+
 
 ## Colab Notebook
 
@@ -24,6 +25,7 @@ Hybrid Time Series Modeling in Python:<br/>
 
 
 ## Prerequisites
+
 * Linux or macOS
 * python 3.8 / R
 * pmarima 1.8.4
@@ -45,20 +47,20 @@ cd Hybrid-Time-Series-Modeling
 pip install -r requirements.txt
 ```
 
-### Run Recommender System
+### Run Time Series Forecasting
 * Download an univariate time-series dataset:
 ```
 datasets/station_case.csv
 ```
-* Train STS Clustering (default: Hierarchical Clustering)
+* Train Hybrid Time Series Model (default: ARIMA-RF)
 ```
 #!./scripts/run_train.sh
-python3 train.py --cluster_method hierarchical
+python3 train.py --model1 ARIMA --model2 RF
 ```
-* Test STS Clustering ARIMA forecasting model (default: Hierarchical Clustering)
+* Test Hybrid Time Series Model (default: ARIMA-RF)
 ```
 #!./scripts/run_main.sh
-pyton3 main.py --cluster_method hierarchical --forecast ARIMA
+pyton3 main.py --model1 ARIMA --model2 RF
 ```
 
 ## Algorithms

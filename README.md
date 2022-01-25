@@ -2,7 +2,7 @@
 ![](https://www.akira.ai/hubfs/Imported_Blog_Media/akira-ai-hybrid-learning-models.png) <br />
 ![](https://img.shields.io/github/license/huytjuh/Recommender-System-Basket-Analysis) ![](https://img.shields.io/maintenance/no/2020)
 
-Hybrid Time Series modeling: A more advanced approach to time-series forecasting by combining the best aspects of Econometric and Machine Learning models, two co-existing approaches both with different strengths and limitations; that is, this innovative framework compensates the limitations of one approach with the strengths of the other.
+Hybrid Time Series modeling: A more advanced approach to time-series forecasting by combining the best aspects of Econometric and Machine Learning models, two co-existing approaches both with different strengths and limitations. An innovative framework compensates the limitations of one approach with the strengths of the other.
 
 Python and R implementation from scratch inspired by [Zhang (2003)](https://www.sciencedirect.com/science/article/pii/S0925231201007020?casa_token=XeXr4aPDvnsAAAAA:pa3DJ-FgeIKkBDlo1czuDt9HX-aXssxxZlUpttChXh82Jr83uG9AWNPiShO7x-zUt6j-65rnA2A) and [Smyl (2020)](https://www.sciencedirect.com/science/article/pii/S0169207019301153?casa_token=Xr7k2IL5bVIAAAAA:VPteiTYtOz1Xo8wKbDuI_0VDiPxGoi1JWGgMsKo9WAH72a_1YGbG9SN69wo-A3Ro45Ve2n-oNhg).
 
@@ -12,26 +12,7 @@ Python and R implementation from scratch inspired by [Zhang (2003)](https://www.
 
 ## Introduction
 
-
-
-
-Time series forecasting is a crucial task in various fields of business and science. There are two co-existing approaches to time series forecasting, statistical methods and machine learning methods, and both come with different strengths and limitations. Hybrid methods promise to advance time series forecasting by combining the best aspects of statistics and machine learning. This blog post gives a deeper understanding of the different approaches to forecasting and seeks to give hints on choosing an appropriate algorithm
-
-
-Hybrid methods promise to advance time series forecasting by combining the best of statistical and machine learning methods.
-
-The fundamental idea is that this combination compensates for the limitations of one approach with the strengths of the other.
-
-For instance, the effectiveness of statistical methods with limited data availability can counteract the extensive data requirements of machine learning methods. Apart from that, the consideration of a priori knowledge can simplify the expected forecasting task and decrease the computational effort. Furthermore, hybrid methods can incorporate cross-learning, a capability that many statistical methods lack. Finally, hybrid methods provide a solution to the dilemma of the assumption of linearity. As real-world time series may be purely linear, purely nonlinear, or often contain a combination of those two patterns, hybrid methods can be effective where traditional approaches reach their limits [2].
-
-
-Hybrid methods are more than just ensembles! While ensemble methods are a simplistic yet effective combination of forecasts such as averages or weighted averages, hybrid methods follow a different strategy. They can be understood as a sophisticated combination of statistical and machine learning methods that interact with each other.
-
-Research on hybrid methods is not a novelty, as the work began almost twenty years ago. The basic concept was first proposed by Zhang, who describes a hybridization of ARIMA and MLP. The underlying principle is that the MLP learns the deviation of the ARIMA prediction from the actual value and seeks to adjust it to obtain a more accurate result. This methodology is plausible as a time series is composed of a linear and a nonlinear component. The ARIMA is fitted to capture the linear component, so consequently, the residuals from the linear model account for the nonlinear relationship. The MLP takes the past residuals as input to learn a function that can be used to forecast the deviation of the ARIMA predictions. Finally, the hybrid forecast is obtained by adding the predictions of both models [3].
-
-
-
-
+Hybrid models promise to advance time-series forecasting by combining two co-existing approaches: Econometrics and Machine Learning models, both comes with different strengths and limitations. It combines the best aspects of statistics and Machine Learning, where one compensates for the weakness with the strengths of the other. That is, the effectiveness of statistical methods with limited data availability can counteract the extensive data requirements of Machine Learning. In turn, the consideration of a priori knowledge can simplify the expected forecasting task and decrease the computational effort, allowing hybrid methods to incorporate cross-learning, a capability that many statistical methods lack. This methodology is plausible as a time-series is composed of a linear and a nonlinear component. The statistical model is fitted to capture the linear component, so consequently, the residuals from the linear model account for the nonlinear relationship. The Machine Learning model takes the past residuals as input to learn a function that can be used to forecast the deviation of the linear predictions. Therefore, as real-world time-series may be purely linear, purely nonlinear, or often contain a combination of those two patterns, hybridization provide a solution to the dilemma of the assumption of linearity where traditional approaches reach their limits.
 
 ## Colab Notebook
 

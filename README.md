@@ -16,28 +16,29 @@ Hybrid models promise to advance time-series forecasting by combining two co-exi
 
 ## Colab Notebook
 
-Hybrid Time Series Modeling based on ARIMA-Fourier (default: lightGBM):<br/>
+Hybrid Time Series Modeling in R:<br/>
 [Google Colab]() | [Code]()
 
-Hybrid Time Series Modeling based on Holt-Winter (default: lightGBM):<br/>
+Hybrid Time Series Modeling in Python:<br/>
 [Google Colab]() | [Code]()
 
 
 ## Prerequisites
 * Linux or macOS
-* python 3.8
+* python 3.8 / R
 * pmarima 1.8.4
 * lightgbm 3.3.2
 * bayesian-optimization 1.2.0
 * CPU or NVIDIA GPU + CUDA CuDNN
+
 
 ## Getting Started
 
 ### Installation
 * Clone this repository.
 ```
-git clone https://github.com/huytjuh/Subsequence-Time-Series-Clustering
-cd Subsequence-Time-Series-Clustering
+git clone https://github.com/huytjuh/Hybrid-Time-Series-Modeling
+cd Hybrid-Time-Series-Modeling
 ```
 * Install Python dependencies using `requirements.txt`.
 ```

@@ -47,7 +47,7 @@ cd Hybrid-Time-Series-Modeling
 pip install -r requirements.txt
 ```
 
-### Run Time Series Forecasting
+### Run Hybrid Time Series Forecasting
 * Download an univariate time-series dataset:
 ```
 datasets/station_case.csv

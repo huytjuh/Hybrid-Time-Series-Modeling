@@ -64,7 +64,7 @@ pyton3 main.py --model1 ARIMA --model2 RF
 ```
 
 ## Algorithms
-The table below lists the global measures describing the univariate time-series obtained using advanced statistical operations that best capture the underlying characteristics of the given time horizon. The following global characteristics are measured and scaled normally: Trend, Seasonality, Periodicity, Serial Correlation, Skewness, Kurtosis, Non-Linearity, Self-Similarity, and Chaos. References and formulas are linked in the Reference column, explaining in detail the math and implementation of the statistics.
+The table below lists the  Time Series Forecasting models currently available in the repository, including its hybrid framework. Python scripts are linked under the Code column, explaining in detail the math and implementation of the algorithm including comments and documentations.
 
 | Algorithm | Type | Description | Code |
 |---|---|---|---|
@@ -76,17 +76,13 @@ The table below lists the global measures describing the univariate time-series 
 | Support Vector Machine <br />(SVM) | Machine Learning | Support Vector Machine is both a classification and regression method aiming to find a hyperplane in an N-dimensional space that distrinctly classifies the data points by calculating the maximum distance between data points of classes and using kernel trick, implicitly mapping their inputs into high-dimensional feature spaces. | [Code]() |
 | Long Short-Term Memory <br />(LSTM) | Machine Learning | Long Short-Term Memory is a recurrent neural network architecture capable of incorporating long-term dependencies due to feedback connections and able to process entire sequences of data using memory cells to store information over longer time intervals. | [Code]() |
 
-To further improve the forecasting performances, STS Clustering is used on the global measures and statistical operations to discover hidden seasons and similar patterns exhibiting within an univariate time-series. That is, the objective is to find groups of similar time windows based on their structural characteristics described previously. We consider two types of clustering methods: Agglomerative Hierarchical Clustering and Self-Organizing Maps (SOM).
+Hybridization can be applied by applying a statistical or exponential smoothing method to the time-series wich from the resulting residuals a Machine Learning model can be applied on top of the initial model aiming to predict the non-linear structure of a time-series.
 
-| Algorithm | Type | Description | Code |
-|---|---|---|---|
-| Hierarchical Clustering | Agglomerative Clustering | Hierarchical Clustering is a method of cluster analysis which seeks to build a hierarchy of clusters visualized with a dendrogram where we use a bottom-up approach on structural similarities for each time window clusters; that is, it is more versatile than partitional algorithms (i.e. Kmeans) and with Ward's minimum variance criterion it does not measure the distance directly making it less sesensitive to initial seed selection. | [Code]() |
-| Self-Organizing Maps (SOM) | Deep Neural Network | Self-Organizing Maps (SOM) is a specific class of Neural Network used extensively as a clustering and visualization tool in Exploratory Data Analysis (EDA); that is, it both a projection method which maps high-dimensional data space into simpler low-dimensional space mapping similar data samples to nearby neurons. | [Code]() |
-
-***Note.*** The univariate time-series has to be partitioned deterministically in order to apply STS Clustering, i.e. split into weeks (52 partitions).
 
 ## Test Results & Performances
-A comparison between seasonal self-evident explanatory variables that fall under the naive methods and STS clustering methods that fall under the more complex methods. We run the evaluation on five different forecasting models, namely ARIMA, RF, LSTM, Hybrid ARIMA-RF, and Hybrid ARIMA-LSTM. Additionally, we provide a [Notebook]() to illustrate how the different algorithms could be evaluated and compared.
+
+
+
 | N-Step Ahead | Clustering | ARIMA | RF | LSTM | ARIMA-RF | ARIMA-LSTM |
 |---|---|---:|---:|---:|---:|---:|
 | 1-month | Hierarchical | -12.06% | 26.34% | 3.14% | 7.20% | -3.82% |

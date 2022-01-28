@@ -1,0 +1,3 @@
+pmarima 1.8.4
+lightgbm 3.3.2
+bayesian-optimization 1.2.0

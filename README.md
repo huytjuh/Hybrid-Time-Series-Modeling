@@ -76,12 +76,10 @@ The table below lists the  Time Series Forecasting models currently available in
 | Support Vector Machine <br />(SVM) | Machine Learning | Support Vector Machine is both a classification and regression method aiming to find a hyperplane in an N-dimensional space that distrinctly classifies the data points by calculating the maximum distance between data points of classes and using kernel trick, implicitly mapping their inputs into high-dimensional feature spaces. | [Code]() |
 | Long Short-Term Memory <br />(LSTM) | Machine Learning | Long Short-Term Memory is a recurrent neural network architecture capable of incorporating long-term dependencies due to feedback connections and able to process entire sequences of data using memory cells to store information over longer time intervals. | [Code]() |
 
-Hybridization can be applied by applying a statistical or exponential smoothing method to the time-series wich from the resulting residuals a Machine Learning model can be applied on top of the initial model aiming to predict the non-linear structure of a time-series.
+Hybridization can be applied by applying a statistical or exponential smoothing method to the time-series which from the resulting residuals a Machine Learning model can be applied on top of the initial model aiming to predict the non-linear structure of a time-series.
 
 
 ## Test Results & Performances
-
-
 
 | N-Step Ahead | Clustering | ARIMA | RF | LSTM | ARIMA-RF | ARIMA-LSTM |
 |---|---|---:|---:|---:|---:|---:|

@@ -27,7 +27,7 @@ Hybrid Time Series Modeling in Python:<br/>
 ## Prerequisites
 
 * Linux or macOS
-* python 3.8 / R
+* python 3.8 or R
 * pmarima 1.8.4
 * lightgbm 3.3.2
 * bayesian-optimization 1.2.0

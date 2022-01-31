@@ -9,11 +9,12 @@ class BaseOptions():
     """
     
     def __init__(self):
-        """Reset the class; indicates the class hasn't been initailized"""
+        """ Reset the class; indicates the class hasn't been initailized. """
+        self.parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
         self.initialized = False
   
     def initialize(self, parser):
-        """Define the common options that are used in both training and test."""
+        """ Define the common options that are used in both training and test. """
         # BASIC PARAMETERS
         parser.add_argument('--name', type=str, default='experiment_name', help='name of the experiment. It decides where to store samples and models')
         parser.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
@@ -35,6 +36,27 @@ class BaseOptions():
         self.initialized = True
         return 
     
-    
-    
-    
+   def parse(self):
+        """ Parse our options, create checkpoints directory suffix, and set up gpu device. """
+        opt = self.gather_options()
+        opt.isTrain = self.isTrain   # train or test
+
+        # process opt.suffix
+        if opt.suffix:
+            suffix = ('_' + opt.suffix.format(**vars(opt))) if opt.suffix != '' else ''
+            opt.name = opt.name + suffix
+
+        self.print_options(opt)
+
+        # set gpu ids
+        str_ids = opt.gpu_ids.split(',')
+        opt.gpu_ids = []
+        for str_id in str_ids:
+            id = int(str_id)
+            if id >= 0:
+                opt.gpu_ids.append(id)
+        if len(opt.gpu_ids) > 0:
+            torch.cuda.set_device(opt.gpu_ids[0])
+
+        self.opt = opt
+        return self.opt

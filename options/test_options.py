@@ -20,5 +20,4 @@ class TestOptions(BaseOptions):
         
         parser.set_defaults(model='test')
         self.isTrain = False
-        
         return parser

@@ -97,3 +97,5 @@ Hybridization can be applied by applying a statistical or exponential smoothing 
 * Zhang, G. P. (2003). Time series forecasting using a hybrid ARIMA and neural network model. Neurocomputing, 50, 159-175. Available online: [Link](https://link.springer.com/content/pdf/10.1007/s10618-005-0039-x.pdf)
 
 * Smyl, S. (2020). A hybrid method of exponential smoothing and recurrent neural networks for time series forecasting. International Journal of Forecasting, 36(1), 75-85. Available online: [Link]()
+
+.
